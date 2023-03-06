@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "backend-mock-prd": "yarn build && cd some-other-server && serve -p 8000",
-    "backend-mock-dev": "yarn clean && cd some-other-server && serve -p 8000",
+    "backend-mock-prd": "yarn clean && yarn build && cd some-other-server && http-server --port 8000 --cors",
+    "backend-mock-dev": "yarn clean && cd some-other-server && http-server --port 8000 --cors --proxy http://localhost:8080",
     "dev": "vite",
     "build": "tsc && vite build",
     "clean": "rm -rf some-other-server/dist/"
@@ -18,7 +18,6 @@
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "@vitejs/plugin-react-swc": "3.2.0",
-    "serve": "14.2.0",
     "typescript": "4.9.5",
     "vite": "4.1.4"
   }

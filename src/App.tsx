@@ -10,21 +10,17 @@ function App() {
       <div>
         {/**
          * Image location: /public
-         * During dev: ❌
-         * During build: ✅
+         * dev: ✅
+         * build: ❌
          */}
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="dist/vite.svg" className="logo" alt="Vite logo" />
-        </a>
+        <img src="vite.svg" className="logo" alt="Vite logo" />
 
         {/**
          * Image location: imported
-         * During dev: ❌
-         * During build: ✅
+         * dev: ✅
+         * build: ✅
          */}
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <img src={reactLogo} className="logo react" alt="React logo" />
       </div>
       <h1>Vite + React</h1>
       <div className="card">
